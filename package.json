@@ -5,6 +5,12 @@
     "description": "Find your Puppy's Family",
     "repository": "https://github.com/jhomble/puppyFamFinder",
     "license": "JJ",
+    "engines": {
+    "node": "6.10.1"
+    },
+    "dependencies": {
+        "bower": "^1.7.7"
+    },
     "devDependencies": {
         "bower": "^1.7.7",
         "http-server": "^0.9.0",

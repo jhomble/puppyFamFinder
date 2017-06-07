@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "bower": "^1.7.7",
+        "express": "^3.21.2",
         "http-server": "*"
     },
     "devDependencies": {
@@ -28,8 +29,8 @@
         "update-deps": "npm update",
         "postupdate-deps": "bower update",
         "prestart": "npm install",
-        "start": "http-server ./ -p ${PORT:=5000} -c-1",
-         "pretest": "npm install",
+        "start": "node web.js",
+        "pretest": "npm install",
         "test": "karma start karma.conf.js",
         "test-single-run": "karma start karma.conf.js --single-run",
         "preupdate-webdriver": "npm install",

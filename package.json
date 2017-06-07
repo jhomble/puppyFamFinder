@@ -6,10 +6,11 @@
     "repository": "https://github.com/jhomble/puppyFamFinder",
     "license": "JJ",
     "engines": {
-    "node": "6.10.1"
+        "node": "6.10.1"
     },
     "dependencies": {
-        "bower": "^1.7.7"
+        "bower": "^1.7.7",
+        "http-server": "*"
     },
     "devDependencies": {
         "bower": "^1.7.7",
@@ -27,8 +28,8 @@
         "update-deps": "npm update",
         "postupdate-deps": "bower update",
         "prestart": "npm install",
-        "start": "http-server -a localhost -p 8000 -c-1 ./app",
-        "pretest": "npm install",
+        "start": "http-server ./ -p ${PORT:=5000} -c-1",
+         "pretest": "npm install",
         "test": "karma start karma.conf.js",
         "test-single-run": "karma start karma.conf.js --single-run",
         "preupdate-webdriver": "npm install",

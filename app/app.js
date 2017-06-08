@@ -7,6 +7,18 @@ var myApp = angular.module('myApp', [
   'myApp.version'
 ]);
 
+myApp.directive('puppyTile', function(){
+  return {
+      restrict:'E',
+      transclude: true,
+      scope: {
+         img: '@'
+      },
+      templateUrl: 'directives/firstHeader.html'
+   };
+})
+
+
 myApp.controller('home', ['$scope', '$firebaseArray', '$firebaseObject', function ($scope, $firebaseArray, $firebaseObject) {
 
   var dbRef = firebase.database().ref();
